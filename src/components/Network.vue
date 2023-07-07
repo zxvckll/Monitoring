@@ -1,6 +1,6 @@
 <script>
 export default {
-  props: ["DiskReadOps", "DiskWriteOps", "DiskReadBytes", "DiskWriteBytes"],
+  props: ["NetworkIn","NetworkOut","NetworkPacketsOut","NetworkPacketsIn"],
   components: {},
   data() {
     return {};
@@ -16,16 +16,16 @@ export default {
 <template>
    <div class="flex flex-wrap">
     <div class="w-1/2">
-      <img :src="DiskReadOps" alt="" />
+      <img :src="NetworkIn" alt="" />
     </div>
     <div class="w-1/2">
-      <img :src="DiskWriteOps" alt="" />
+      <img :src="NetworkOut" alt="" />
     </div>
     <div class="w-1/2">
-      <img :src="DiskReadBytes" alt="" />
+      <img :src="NetworkPacketsOut" alt="" />
     </div>
     <div class="w-1/2">
-      <img :src="DiskWriteBytes" alt="" />
+      <img :src="NetworkPacketsIn" alt="" />
     </div>
   </div>
 </template>

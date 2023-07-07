@@ -22,17 +22,14 @@ export default {
 
 <template>
   <div class="nav">
-    <div class="flex-col text-black flex-auto h-full">
+    <div class="flex-col text-black flex-auto h-full flex">
       
         
       <button :class="Active == 'CPU' ?  'active' :''" class=" h-1/5 w-full bg-white hover:border hover:bg-blue-200" @click="$emit('changeTab','CPU')">
         CPU
       </button>
-      <button :class="Active == 'Memory' ?  'active' :''" class="h-1/5 w-full bg-white hover:border hover:bg-blue-200" @click="$emit('changeTab','Memory')">
-        Memory 
-      </button>
       <button :class="Active == 'Disk' ?  'active' :''" class="h-1/5 w-full bg-white hover:border hover:bg-blue-200" @click="$emit('changeTab','Disk')">Disk</button>
-      <button :class="Active == 'Wifi' ?  'active' :''" class="h-1/5 w-full bg-white hover:border hover:bg-blue-200" @click="$emit('changeTab','Wifi')">Wi-Fi</button>
+      <button :class="Active == 'Network' ?  'active' :''" class="h-1/5 w-full bg-white hover:border hover:bg-blue-200" @click="$emit('changeTab','Network')">Network</button>
     </div>
   </div>
 </template>
